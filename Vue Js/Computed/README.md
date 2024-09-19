@@ -12,10 +12,10 @@ A computed property is a special kind of variable that ***automatically updates*
 Computed properties cache their results, meaning they only recalculate when the dependent data changes, making them more efficient for expensive operations compared to methods. 🏎️⚡
 
 ## 🔄 How Computed Properties Work:
-> - **Caching in Computed Properties:**
+> - **<ins>`Caching in Computed Properties:`</ins>**
 Computed properties cache their values. If the dependent data hasn't changed, Vue returns the cached result, avoiding unnecessary recalculations.
 >
->- **Triggering Mechanism:**
+>- **<ins>`Triggering Mechanism:`</ins>**
 Vue automatically tracks which properties a computed property depends on and only updates when those properties change, optimizing performance.
 
 ## 📚 Example Overview
