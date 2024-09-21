@@ -1,0 +1,45 @@
+name: Scheduled Commits for Vue Apps
+
+on:
+  schedule:
+    # Runs at 10:00 AM IST (4:30 UTC) on September 22, 23, and 24.
+    - cron: '30 4 22 9 *' # Schedule for September 22
+    - cron: '30 4 23 9 *' # Schedule for September 23
+    - cron: '30 4 24 9 *' # Schedule for September 24
+
+jobs:
+  commit-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update and Commit for "Props" App
+        if: ${{ github.event.schedule == '30 4 22 9 *' }}
+        run: |
+          cd "Vue Js/Props"
+          echo "Update Props App" > update_props.txt
+          git add .
+          git commit -m "Scheduled update for Props App on $(date)"
+
+      - name: Update and Commit for "Emit" App
+        if: ${{ github.event.schedule == '30 4 23 9 *' }}
+        run: |
+          cd "Vue Js/Emit ( Component Event )"
+          echo "Update Emit App" > update_emit.txt
+          git add .
+          git commit -m "Scheduled update for Emit App on $(date)"
+
+      - name: Update and Commit for "Provide and Inject" App
+        if: ${{ github.event.schedule == '30 4 24 9 *' }}
+        run: |
+          cd "Vue Js/Provide and Inject"
+          echo "Update Provide and Inject App" > update_provide_inject.txt
+          git add .
+          git commit -m "Scheduled update for Provide and Inject App on $(date)"
+
+      - name: Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin main
