@@ -30,6 +30,9 @@ provide("Name", ["Anonymous","Aman"])
 <template>
   <div>
 
+
+    <h4>Provide and Inject: Advancement to Props..</h4>
+
     <SchoolComponent myName="Aman" herName="Hidden" />
     <!-- <SchoolComponent :myName="Story.name" :herName="Story.anotherName" /> -->
 

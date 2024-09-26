@@ -18,6 +18,8 @@ const handleUserInfo = (username, email, password) => {
 <template>
   <div class="main-section">
 
+    <h4>Emit: Child to Parent..</h4>
+
     <div class="inner-section">
       <h1>Parent Component:</h1>
       <p>As you can see, we can access the child component's variables in the parent component, thanks to <b>$emit</b>.

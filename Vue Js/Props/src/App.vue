@@ -6,13 +6,16 @@ import PropValidation from './components/PropValidation.vue'
 import ComplexProps from './components/ComplexProps.vue'
 import { ref } from 'vue'
 
-const firstName = ref('Shifali')  
+const firstName = ref('Shifali')
 const lastName = ref('School')
 
 </script>
 
 <template>
+
+
   <div>
+    <h4>Props: Parent to Child..</h4>
 
     <StaticProps something="Jordan" />
     <hr>
@@ -22,7 +25,7 @@ const lastName = ref('School')
     <hr>
     <PropValidation firstName="Suman" :age=20 />
     <hr>
-    <ComplexProps :clients="['John', 'Jessica', 'Aman']" :user="{ name:'Shifali',age:20}" />
+    <ComplexProps :clients="['John', 'Jessica', 'Aman']" :user="{ name: 'Shifali', age: 20 }" />
     <hr>
   </div>
 </template>
