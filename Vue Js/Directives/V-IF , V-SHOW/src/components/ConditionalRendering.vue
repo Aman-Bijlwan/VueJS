@@ -47,6 +47,14 @@ onMounted(() =>
     <h5 v-else>Nothing is true.</h5>
     <hr>
 
+    if(isTrue){
+      cout<<"isTr"
+    }
+    else if(
+
+    
+    )
+
     <h2>(II). Example 2:</h2>
     <input type="text" placeholder="Enter your age here:" v-model="age" />
     <h5 v-if="age > 18">Success..</h5>
